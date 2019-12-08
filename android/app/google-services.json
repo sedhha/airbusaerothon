@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "672845082029",
+    "firebase_url": "https://aeronext-74418.firebaseio.com",
+    "project_id": "aeronext-74418",
+    "storage_bucket": "aeronext-74418.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672845082029:android:8b9542fd7076ac32cb0524",
+        "android_client_info": {
+          "package_name": "aeronext.aero_next"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672845082029-l1q5sv542prddfcamq36ssq1sn7n0aiv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTYBPGHIhsXjOcm7xNMxVtGSdBAReD7hM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672845082029-l1q5sv542prddfcamq36ssq1sn7n0aiv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
