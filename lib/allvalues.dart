@@ -16,8 +16,8 @@ ThemeData theme= ThemeData(
     body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
   ),
 );
-Color Background_Color=Color(0xFF4B1248);
-Color Button_Color=Color(0xFF1D0B38);
+Color Background_Color=Color(0xFF40620B);
+Color Button_Color=Color(0xFF0A5D00);
 RoundedRectangleBorder roundedrectangle=RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(30.0));
 TextStyle LoginScreenTextStyle=TextStyle(

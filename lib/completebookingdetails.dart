@@ -1,6 +1,8 @@
 import 'package:aero_next/allvalues.dart';
 import 'package:aero_next/bookaflight.dart';
+import 'package:aero_next/login.dart';
 import 'package:aero_next/user.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 class CompleteBookingDetails extends StatelessWidget {
   @override
@@ -17,9 +19,14 @@ class CompletebookingDetails extends StatefulWidget {
 class _CompletebookingDetailsState extends State<CompletebookingDetails> {
   @override
   void SendBookingConfirmation()
-  {
+  async {
     //TODO: Send booking confirmation using http
-    url='http://intracash.in/airbus/book.php?t_id=$TravelID';
+    print(TravelID);
+    print(EmailID);
+    url='http://intracash.in/airbus/book.php?travel_id=$TravelID&email=$EmailID';
+    var response = await http.post(url, body: {});
+    print(response.statusCode);
+    print(response.body);
   }
   void _showDialog() {
     // flutter defined function
@@ -48,6 +55,7 @@ class _CompletebookingDetailsState extends State<CompletebookingDetails> {
   }
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text('Flight Details'),
         backgroundColor: Button_Color,
@@ -78,7 +86,7 @@ class _CompletebookingDetailsState extends State<CompletebookingDetails> {
                 borderSide: BorderSide(color:Colors.black,),
                 shape: roundedrectangle,
 
-                child: Center(child: Text('Register',
+                child: Center(child: Text('Book Now',
                   style: TextStyle(color: Colors.black,),)),
                 onPressed: ()
                 {

@@ -1,5 +1,8 @@
 import 'package:aero_next/bookaflight.dart';
+import 'package:aero_next/crop_req.dart';
 import 'package:aero_next/defaultuser.dart';
+import 'package:aero_next/firebase_ml_kit.dart';
+import 'package:aero_next/mycrops.dart';
 import 'package:aero_next/special_offers.dart';
 import 'package:aero_next/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -81,16 +84,19 @@ class _UserUIsState extends State<UserUIs>
       child: Scaffold(
         backgroundColor: Background_Color,
         appBar: AppBar(
+
           backgroundColor: Button_Color,
           title: Text('Welcome User!'),
           actions: <Widget>[
+
             FlatButton.icon(onPressed: ()async{
               await _auth.signOut();
               Navigator.push(context,
                 MaterialPageRoute(
                     builder: (context)=>WelcomeScreen()),);
             },
-                icon: Icon(Icons.perm_identity), label: Text('Logout')),
+                icon: Icon(Icons.perm_identity), label: Text('Logout'),
+            color: Color(0xFF1FC600),),
           ],
         ),
         body: Column(
@@ -114,12 +120,12 @@ class _UserUIsState extends State<UserUIs>
                 Column(
                   children: <Widget>[
                     Container(
-                      color: Colors.white,
+                      color: Color(0xFF98FF98),
                       child: Text(EmailID),
                     ),
                     SizedBox(height: 10,),
                     Container(
-                      color: Colors.white,
+                      color: Color(0xFF98FF98),
                       child: Text(UserName),
                     ),
                   ],
@@ -136,14 +142,14 @@ class _UserUIsState extends State<UserUIs>
                   borderSide: BorderSide(color:Colors.white,),
                   shape: roundedrectangle,
 
-                  child: Center(child: Text('Booking History',
+                  child: Center(child: Text('My Crops',
                     style: TextStyle(color: Colors.white,),)),
                   onPressed: ()
                   {
-                    GenerateWidgetTree();
-                    print('Here we go:${CompleteBookingWidgetTree.length}');
+                    //GenerateWidgetTree();
+                    //print('Here we go:${CompleteBookingWidgetTree.length}');
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context)=>BookingHistory()),);                 //Navigator.push(context//MaterialPageRoute(builder: (context)=>LoginScreen()),);
+                      MaterialPageRoute(builder: (context)=>MyCrops()),);                 //Navigator.push(context//MaterialPageRoute(builder: (context)=>LoginScreen()),);
                   },
                 ),
               ),),
@@ -157,14 +163,14 @@ class _UserUIsState extends State<UserUIs>
                   borderSide: BorderSide(color:Colors.white,),
                   shape: roundedrectangle,
 
-                  child: Center(child: Text('Book a Flight',
+                  child: Center(child: Text('Crop Requirement',
                     style: TextStyle(color: Colors.white,),)),
                   onPressed: ()
                   {
                     //UserFlightDetails=getAllFlightDetailsOfUser();
                     //GenerateWidgetTree();
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context)=>BookAFlight()),);                 //Navigator.push(context//MaterialPageRoute(builder: (context)=>LoginScreen()),);
+                      MaterialPageRoute(builder: (context)=>CropRequirement()),);                 //Navigator.push(context//MaterialPageRoute(builder: (context)=>LoginScreen()),);
                   },
                 ),
               ),),
@@ -178,12 +184,12 @@ class _UserUIsState extends State<UserUIs>
                   borderSide: BorderSide(color:Colors.white,),
                   shape: roundedrectangle,
 
-                  child: Center(child: Text('Special Offers',
+                  child: Center(child: Text('Identify my Soil',
                     style: TextStyle(color: Colors.white,),)),
                   onPressed: ()
                   {
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context)=>SpecialOffers()),);                 //Navigator.push(context//MaterialPageRoute(builder: (context)=>LoginScreen()),);
+                      MaterialPageRoute(builder: (context)=>Display_Image()),);                 //Navigator.push(context//MaterialPageRoute(builder: (context)=>LoginScreen()),);
                   },
                 ),
               ),),

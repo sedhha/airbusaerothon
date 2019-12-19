@@ -41,23 +41,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         body: Column(
           children: <Widget>[
             SizedBox(height: 20,),
-            Image.asset('assets/images/logo.png'),
+            Image.asset('assets/images/farm.png'),
             SizedBox(height: 10,),
             Center(
               child: TypewriterAnimatedTextKit(
-                text: ["Welcome to Airbus"],
-                textStyle: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w600,
-                  fontSize: 25,
-                ),
-              ),
-            ),
-            SizedBox(height: 10,),
-            Center(
-              child: TyperAnimatedTextKit(
-                text: ["Flight Booking"],
+                text: ["Smart Farm"],
                 textStyle: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Montserrat',
@@ -113,9 +101,20 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
           ],
         ),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Background_Color,
       ),
     );
   }
 }
-
+/*SizedBox(height: 10,),
+Center(
+child: TyperAnimatedTextKit(
+text: ["Flight Booking"],
+textStyle: TextStyle(
+color: Colors.white,
+fontFamily: 'Montserrat',
+fontWeight: FontWeight.w600,
+fontSize: 25,
+),
+),
+),*/

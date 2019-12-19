@@ -60,6 +60,7 @@ class _BookaFlightState extends State<BookaFlight> {
   }
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Background_Color,
       appBar: AppBar(title: Text('Search For the Flight'),
         backgroundColor: Button_Color,

@@ -32,6 +32,8 @@ dependencies:
   firebase_storage: ^3.0.8
   provider: ^3.1.0+1
   http: ^0.12.0+2
+  mime: ^0.9.6+3
+  toast: ^0.1.5
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +54,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/logo.png
+    - assets/images/wheat.png
+    - assets/images/rice.png
+    - assets/images/gram.png
+    - assets/images/maize_details.png
+    - assets/images/wheat_details.png
+    - assets/images/gram_details.png
+    - assets/images/farm.png
+    - assets/images/button.png
     - assets/images/user.png
     - assets/images/flighticon.png
 

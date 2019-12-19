@@ -106,7 +106,8 @@ class _RegisterscreenState extends State<Registerscreen> with TickerProviderStat
       child: ModalProgressHUD(
         inAsyncCall: showspinner,
         child: Scaffold(
-          backgroundColor: Colors.blueAccent,
+          resizeToAvoidBottomInset: false,
+          backgroundColor: Background_Color,
           appBar: AppBar(
             backgroundColor: Button_Color,
             title: Text('Register your account!'),

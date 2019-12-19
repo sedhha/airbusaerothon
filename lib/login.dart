@@ -90,7 +90,7 @@ class _LoginscreenState extends State<Loginscreen> with TickerProviderStateMixin
 
   List GetUserInformationbyEmail(String Email)
   {
-    return(['ABC Singh',123965,'ABC Airlines']);
+    return(['Madhur Dheer',123965,'ABC Airlines']);
   }
   @override
   Widget build(BuildContext context) {
@@ -100,10 +100,10 @@ class _LoginscreenState extends State<Loginscreen> with TickerProviderStateMixin
         inAsyncCall: showspinner,
         child: Scaffold(
           resizeToAvoidBottomInset: false,
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Background_Color,
           appBar: AppBar(
             backgroundColor: Button_Color,
-            title: Text('Login to your Airbus Account'),
+            title: Text('SmartFarm Account Login'),
           ),
           body: Column(
             children: <Widget>[
